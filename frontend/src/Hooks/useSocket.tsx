@@ -7,7 +7,7 @@ export const SocketProvider = (props: any) => {
   const [isConnected, setIsConnected] = useState(false);
 
   const socket = useMemo(() => {
-    const socketInstance = io("http://localhost:8000", {
+    const socketInstance = io("https://vibely-sk98.onrender.com", {
       transports: ["websocket"], 
       reconnectionAttempts: 5,   
     });
