@@ -48,7 +48,7 @@ const Home: React.FC = () => {
       <div className="w-full max-w-4xl ">
         {/* Join Room Section */}
         <div className="p-6 rounded-lg shadow-lg flex flex-col items-center justify-center ">
-          <h2 className="text-2xl font-semibold mb-4">Join Room</h2>
+          <h2 className="text-2xl font-semibold mb-4">Create/Join Room</h2>
           <input
             type="text"
             placeholder="Enter your name"
@@ -67,7 +67,7 @@ const Home: React.FC = () => {
             className="w-full px-4 py-2 mb-4 bg-green-600 hover:bg-green-700 rounded-lg shadow-md"
             onClick={handleJoinRoom}
           >
-            Join Room
+            Create/Join Room
           </button>
         </div>
       </div>

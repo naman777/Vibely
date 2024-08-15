@@ -78,13 +78,42 @@ const Room = () => {
 
 
   return (
-    <div className='text-white text-2xl font-extrabold'>
-        <button onClick={()=> sendStream(mystream)}>send my stream</button>
-        <ReactPlayer url={mystream!} playing muted />
-        <h2>U are conneted to</h2>
-        {otherUser}
-        <ReactPlayer url={remoteStream!} playing />
-    </div>
+    <div className='min-h-screen  p-4 flex flex-col'>
+            <div className='flex-1 flex flex-col md:flex-row gap-5'>
+                {/* Remote Stream Section */}
+                <div className='flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow-lg md:w-3/4'>
+                    <h2 className='text-white text-2xl font-bold mb-2'>You are connected to</h2>
+                    <p className='text-white text-xl mb-4'>{otherUser}</p>
+                    <ReactPlayer
+                        url={remoteStream!}
+                        playing
+                        width='100%'
+                        height='auto'
+                        className='rounded-lg border border-gray-700'
+                    />
+                </div>
+
+                {/* Local Stream Section */}
+                <div className='flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow-lg md:w-1/4 justify-center'>
+                    <div className='w-full mb-4'>
+                        <ReactPlayer
+                            url={mystream!}
+                            playing
+                            muted
+                            width='100%'
+                            height='auto'
+                            className='rounded-lg border border-gray-700'
+                        />
+                    </div>
+                    <button
+                        onClick={() => mystream && sendStream(mystream)}
+                        className='w-full  px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg shadow-md text-white'
+                    >
+                        Send My Stream
+                    </button>
+                </div>
+            </div>
+        </div>
   )
 }
 
