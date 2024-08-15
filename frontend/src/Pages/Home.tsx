@@ -37,7 +37,7 @@ const Home: React.FC = () => {
     } 
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center text-white ">
+    <div className="min-h-screen flex flex-col justify-center items-center text-white bg-black">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Vibely</h1>
         <p className="text-lg md:text-2xl max-w-2xl mx-auto">
