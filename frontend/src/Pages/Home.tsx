@@ -37,15 +37,16 @@ const Home: React.FC = () => {
     } 
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center text-white bg-black">
+    <div className="min-h-screen flex flex-col justify-center items-center text-white ">
+      <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Vibely</h1>
         <p className="text-lg md:text-2xl max-w-2xl mx-auto">
-          Seamless and secure video calling for everyone. Whether it's for work, study, or catching up with loved ones, VideoConnect brings people together with just a click. Connecting People!!!
+          Seamless and secure video calling for everyone. Whether it's for work, study, or catching up with loved ones, Vibely brings people together with just a click. Connecting People!!!
         </p>
       </div>
 
-      <div className="w-full max-w-4xl ">
+      <div className="w-[500px] max-w-4xl ">
         {/* Join Room Section */}
         <div className="p-6 rounded-lg shadow-lg flex flex-col items-center justify-center ">
           <h2 className="text-2xl font-semibold mb-4">Create/Join Room</h2>
@@ -64,7 +65,7 @@ const Home: React.FC = () => {
             className="w-full px-4 py-2 mb-4 text-black rounded-lg"
           />
           <button
-            className="w-full px-4 py-2 mb-4 bg-green-600 hover:bg-green-700 rounded-lg shadow-md"
+            className="w-full px-4 py-2 mb-4 bg-blue-600 hover:bg-blue-800 rounded-lg shadow-md"
             onClick={handleJoinRoom}
           >
             Create/Join Room
